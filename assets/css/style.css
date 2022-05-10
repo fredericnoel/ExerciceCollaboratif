@@ -1,7 +1,38 @@
-@import url('reset.css');
+@import url(../css/reset.css);
 
-body {
-    font-size: 16px;
-    color: #000;
-    font-family: Arial, Verdana, sans-serif;
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 200px;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+}
+
+header{
+    background-color: rgb(210, 108, 44);
+    width: 100%;
+    grid-area: header;
+    box-shadow: black 0px -1px 20px ;
+    z-index: 8;
+  
+    
+}
+
+main{
+    background-color: rgb(245, 245, 244);
+    grid-area: main;
+    width: 100%;
+
+}
+
+footer{
+    background: rgb(210, 108, 44);
+    grid-area: footer;
+    width: 100%;
+    box-shadow: 0px 4px 20px black;
 }
